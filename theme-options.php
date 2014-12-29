@@ -7,8 +7,8 @@ function path_create_menu(){
 	// create new sub-menu
 	add_submenu_page(
 		'themes.php', 
-		'Path Theme Options',
-		'Path Options',
+		'Custom Theme Options',
+		'Custom Options',
 		'administrator',
 		'theme-options.php',
 		'path_settings_page'
@@ -21,24 +21,12 @@ function path_create_menu(){
 function path_register_settings(){
 	// register social media setting
 	register_setting('path-settings-group', 'path_twitter');
+	register_setting('path-settings-group', 'path_facebook');
+	register_setting('path-settings-group', 'path_youtube');
+	register_setting('path-settings-group', 'path_google_plus');
 
 	// register logo settings
 	register_setting('path-settings-group', 'path_logo');
-
-	// register logo settings
-	register_setting('path-settings-group', 'path_homepage_image');
-
-	// register logo settings
-	register_setting('path-settings-group', 'path_clients_image');
-
-	// register logo settings
-	register_setting('path-settings-group', 'path_agencies_image');
-
-	// register logo settings
-	register_setting('path-settings-group', 'path_landlords_image');
-
-	// register logo settings
-	register_setting('path-settings-group', 'path_volunteers_image');
 
 	// register analytics
 	register_setting('path-settings-group', 'path_analytics');
@@ -67,54 +55,33 @@ function path_settings_page(){
 		</tr>
 
 		<tr valign="top">
-		<th scope="row">Homepage Image:</th>
-		<td>
-			<input type="text" name="path_homepage_image" value="<?php print get_option('path_homepage_image'); ?>" />
-			<br/>
-			*upload using the Media Uploader and paste the URL here.
-		</td>
-		</tr>
-
-		<tr valign="top">
-		<th scope="row">Homepage Clients Image:</th>
-		<td>
-			<input type="text" name="path_clients_image" value="<?php print get_option('path_clients_image'); ?>" />
-			<br/>
-			*upload using the Media Uploader and paste the URL here.
-		</td>
-		</tr>
-
-		<tr valign="top">
-		<th scope="row">Homepage Agencies Image:</th>
-		<td>
-			<input type="text" name="path_agencies_image" value="<?php print get_option('path_agencies_image'); ?>" />
-			<br/>
-			*upload using the Media Uploader and paste the URL here.
-		</td>
-		</tr>
-
-		<tr valign="top">
-		<th scope="row">Homepage landlords Image:</th>
-		<td>
-			<input type="text" name="path_landlords_image" value="<?php print get_option('path_landlords_image'); ?>" />
-			<br/>
-			*upload using the Media Uploader and paste the URL here.
-		</td>
-		</tr>
-
-		<tr valign="top">
-		<th scope="row">Homepage volunteers Image:</th>
-		<td>
-			<input type="text" name="path_volunteers_image" value="<?php print get_option('path_volunteers_image'); ?>" />
-			<br/>
-			*upload using the Media Uploader and paste the URL here.
-		</td>
-		</tr>
-
-		<tr valign="top">
 		<th scope="row">Twitter Link:</th>
 		<td>
 			<input type="text" name="path_twitter" value="<?php print get_option('path_twitter'); ?>" />
+			<br/>
+		</td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">Facebook Link:</th>
+		<td>
+			<input type="text" name="path_facebook" value="<?php print get_option('path_facebook'); ?>" />
+			<br/>
+		</td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">YouTube Link:</th>
+		<td>
+			<input type="text" name="path_youtube" value="<?php print get_option('path_youtube'); ?>" />
+			<br/>
+		</td>
+		</tr>
+
+		<tr valign="top">
+		<th scope="row">Google Plus Link:</th>
+		<td>
+			<input type="text" name="path_google_plus" value="<?php print get_option('path_google_plus'); ?>" />
 			<br/>
 		</td>
 		</tr>
