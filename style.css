@@ -1,0 +1,153 @@
+/*
+Theme Name: Giz Edwards Theme
+Theme URI: http://www.gizedwards.com/
+Description: A responsive theme for GizEdwards.com. Based upon the 320 Wordpress-Bootstrap theme
+Version: 0
+Author: Tony Edwards
+Author URI: https://www.purelywebdesign.co.uk
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+/* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
+
+.navbar .navbar-header{
+	height:170px;
+} 
+
+.navbar-default .navbar-nav>.active>a {
+	background-color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: #fff;
+}
+
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-brand img{
+	max-width: 100%;
+}
+
+@media screen and (max-width: 767px) { 
+	.navbar-brand {
+		max-width: 80%;
+	}
+}
+
+.jumbo-header h1{
+	margin-bottom: 20px;
+}
+
+.jumbo-message .btn{
+	margin: 10px 0;
+}
+
+
+.top-row{
+	margin-top: 90px;
+}
+
+.img_middle{
+	margin: 0 auto;
+	vertical-align: bottom;
+}
+
+.btn-primary{
+	background-color: #72308D;
+	border-color: #72308D;
+	-webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.btn-primary:hover {
+	background-color: #9B70B2;
+	border-color: #72308D;
+	-webkit-transition: background-color 0.7s ease;
+    transition: background-color 0.7s ease;
+}
+
+.btn-primary:active {
+	background-color: #9B70B2;
+	border-color: #72308D;
+}
+
+.navbar-default{
+	border-color: #fff;
+}
+
+.header-border {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.home .navbar-header{
+	height:130px;
+
+}
+
+.home .top-row{
+	margin-top: 160px;
+}
+
+@media screen and (max-width: 767px) { 
+	.navbar-form {
+		display: none;
+	}
+
+}
+
+.FAageSocialIcons{
+	margin-top: 15px;
+}
+
+.FAageSocialIcons a {
+	color: #fff;
+	font-size: 20px;
+	padding: 10px;
+	line-height: 40px; 
+}
+
+.FAageSocialIcons ul {
+    margin-left: 0; 
+}
+
+.jumbo-message{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.homepageCategoryImage{
+	max-width: 100%;
+}
+
+
+.FAageSocialIcons ul li {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    -webkit-transition: background-color 0.7s ease;
+    transition: background-color 0.7s ease;
+    background-color: #C1C0C0;
+    border-radius: 3px; 
+}
+
+.twitter:hover {
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    background-color: #00aced; }
+
+#content {
+	margin-top:120px;
+}
+
+
+
+/***********  ADMIN AREA  ***************/
+
+.analytics-textarea{
+	width: 300px;
+	height: 150px;
+}
