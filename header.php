@@ -54,7 +54,7 @@
 
 						<a class="navbar-brand" title="<?php echo get_bloginfo('description'); ?>" 
 							href="<?php echo home_url(); ?>">
-							<img src='<?php print $logo; ?>' alt="<?php bloginfo('name'); ?>">
+							<span>Giz Edwards</span>
 						</a>
 					</div>
 

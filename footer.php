@@ -15,7 +15,7 @@
 						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					
-					<p class="pull-right">Developed by Team W.A.D</p>
+					<p class="pull-right">Developed by <a href="http://purelywebdesign.co.uk" title="Plymouth Web Design">Tony Edwards</a></p>
 			
 					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
 				
