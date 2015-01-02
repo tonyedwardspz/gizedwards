@@ -39,7 +39,7 @@
 		<header role="banner">
 				
 			<div class="navbar navbar-default navbar-fixed-top">
-				<div class="container header-border">
+				<div class="container header-border" id="containerTop">
           
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -48,13 +48,18 @@
 							<span class="icon-bar"></span>
 						</button>
 
-						<?php $logo = get_option('path_logo', IMAGES.'/logo.png'); ?>
+						<?php $logo = get_option('path_logo'); ?>
 
 
 
 						<a class="navbar-brand" title="<?php echo get_bloginfo('description'); ?>" 
 							href="<?php echo home_url(); ?>">
-							<span>Giz Edwards</span>
+							<?php
+							if ($logo){ ?>
+								<img src="<?php echo $logo; ?>">
+							<?php } else  {?>
+								<span>Giz Edwards</span>
+							<?php } ?>
 						</a>
 					</div>
 

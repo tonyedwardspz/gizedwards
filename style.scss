@@ -11,9 +11,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 /* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
 
-.navbar .navbar-header{
-	height:80px;
-} 
+#content{
+	padding: 60px 0 0;
+}
 
 .navbar-default .navbar-nav>.active>a {
 	background-color: #fff;
@@ -35,18 +35,45 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 	font-size: 30px;
 }
 
-#content {
-	margin-top:70px;
+.navbar{
+	margin-bottom: 0;
+	background-color: #F8F8F8;
+}
+
+body{
+	padding-top: 10px;
+}
+
+.navbar-fixed-top{
+	position: relative;
+}
+
+@media screen and (min-width: 768px) { 
+	.navbar, .navbar-header{
+		height:130px;
+	} 
 }
 
 @media screen and (max-width: 767px) { 
 	.navbar-brand {
 		max-width: 80%;
+		padding: 0;
 	}
 
 	#content{
 		margin-top: 0;
 	}
+
+	.navbar-fixed-top{
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: 1030;
+	}
+
+	.navbar, .navbar-header{
+		height:100px;
+	} 
 }
 
 .jumbo-header h1{
@@ -57,6 +84,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 	margin: 10px 0;
 }
 
+#containerTop{
+	background-color: #F8F8F8;
+}
 
 .top-row{
 	margin-top: 90px;
@@ -92,16 +122,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 	border-bottom: 1px solid #e7e7e7;
 }
 
-/*.home .navbar-header{
-	height:130px;
-
-}*/
-
 @media screen and (max-width: 767px) { 
 	.navbar-form {
 		display: none;
 	}
+}
 
+@media screen and (min-width: 767px) { 
+	.container{
+		width:98%;
+	}
 }
 
 .FAageSocialIcons{
@@ -116,7 +146,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 }
 
 .FAageSocialIcons ul {
-    margin-left: 0; 
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .jumbo-message{
