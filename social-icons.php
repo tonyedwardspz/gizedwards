@@ -31,7 +31,7 @@ $google_plus = get_option('path_google_plus');
 
     <?php if($google_plus): ?>
     <li class="googleplus">
-        <a href="<?php print $googleplus; ?>" title="Find Giz on Google Plus" target="_blank">
+        <a href="<?php print $google_plus; ?>" title="Find Giz on Google Plus" target="_blank">
             <i class="social_icon fa fa-google-plus"></i></a>
     </li>
     <?php endif; ?>
