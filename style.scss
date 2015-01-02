@@ -9,7 +9,20 @@ License: GNU General Public License v2.0 & Apache License 2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
 */
 
-/* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
+
+/*variables*/
+$socialTwitter: #00aced;
+$socialYouTube: #d34836;
+$socialGooglePlus: #cd201f;
+$socialFacebook: #3b5998;
+$socialBackground: #3b5998;
+$navbarBackground: #F8F8F8;
+
+/*Mixins*/
+@mixin default-trans(){
+	transition: background-color 0.5s ease;
+}
+
 
 #content{
 	padding: 60px 0 0;
@@ -37,7 +50,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 .navbar{
 	margin-bottom: 0;
-	background-color: #F8F8F8;
+	background-color: $navbarBackground;
 }
 
 body{
@@ -85,7 +98,7 @@ body{
 }
 
 #containerTop{
-	background-color: #F8F8F8;
+	background-color: $navbarBackground;
 }
 
 .top-row{
@@ -100,13 +113,13 @@ body{
 .btn-primary{
 	background-color: #72308D;
 	border-color: #72308D;
-    transition: background-color 0.5s ease;
+    @include default-trans();
 }
 
 .btn-primary:hover {
 	background-color: #9B70B2;
 	border-color: #72308D;
-    transition: background-color 0.7s ease;
+    @include default-trans();
 }
 
 .btn-primary:active {
@@ -136,62 +149,57 @@ body{
 
 .FAageSocialIcons{
 	margin-top: 15px;
-}
 
-.FAageSocialIcons a {
-	color: #fff;
-	font-size: 20px;
-	padding: 10px;
-	line-height: 40px; 
-}
+	a {
+		color: #fff;
+		font-size: 20px;
+		padding: 10px;
+		line-height: 40px; 
+	}
 
-.FAageSocialIcons ul {
-    margin-left: 0;
-    padding-left: 0;
-}
+	ul {
+	    margin-left: 0;
+	    padding-left: 0;
 
-.jumbo-message{
-	margin-top: 20px;
-	margin-bottom: 30px;
+	    li {
+		    display: inline-block;
+		    height: 40px;
+		    width: 40px;
+		    margin-right: 5px;
+		    @include default-trans();
+		    background-color: $socialBackground;
+		    border-radius: 3px; 
+		}
+	}
 }
 
 .homepageCategoryImage{
 	max-width: 100%;
 }
 
-
-.FAageSocialIcons ul li {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin-right: 5px;
-    transition: background-color 0.7s ease;
-    background-color: #C1C0C0;
-    border-radius: 3px; 
-}
-
 .twitter:hover {
-    transition: background-color 0.5s ease;
-    background-color: #00aced; 
+    @include default-trans();
+    background-color: $socialTwitter; 
 }
 
 .googleplus:hover{
-    transition: background-color 0.5s ease;
-    background-color: #d34836;
+    @include default-trans();
+    background-color: $socialGooglePlus;
 }
 
 .youtube:hover{
-    transition: background-color 0.5s ease;
-    background-color: #cd201f;
+    @include default-trans();
+    background-color: $socialYouTube;
 }
 
 .facebook:hover{
-    transition: background-color 0.5s ease;
-    background-color: #3b5998;
+    @include default-trans();
+    background-color: $socialFacebook;
 }
 
-
-
+#main{
+	overflow: hidden;
+}
 
 
 /* Body styles */
