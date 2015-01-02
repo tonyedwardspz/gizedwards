@@ -145,10 +145,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 .twitter:hover {
     -webkit-transition: background-color 0.5s ease;
     transition: background-color 0.5s ease;
-    background-color: #00aced; }
+    background-color: #00aced; 
+}
 
+.googleplus:hover{
+	-webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    background-color: #d34836;
+}
 
+.youtube:hover{
+	-webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    background-color: #cd201f;
+}
 
+.facebook:hover{
+	-webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    background-color: #3b5998;
+}
 
 
 /***********  ADMIN AREA  ***************/
