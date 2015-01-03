@@ -719,4 +719,12 @@ function wp_bootstrap_filter_ptags_on_images( $content ){
 }
 add_filter( 'the_content', 'wp_bootstrap_filter_ptags_on_images' );
 
+
+// Custom post type - video 
+require_once('video-manager.php');
+
+
+
+
+
 ?>
