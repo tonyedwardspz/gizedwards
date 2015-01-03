@@ -127,7 +127,7 @@ require_once('library/shortcodes.php');
 // Custom Backend Footer
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
 function wp_bootstrap_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by Team W.A.D</span>.';
+	echo '<span id="footer-thankyou">Developed by your Brother</span>.';
 }
 
 // adding it to the admin area
