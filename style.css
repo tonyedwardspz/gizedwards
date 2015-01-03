@@ -100,13 +100,13 @@ body {
   transition: background-color 0.5s ease; }
 
 /* line 117, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
-.page-header {
-  margin-top: 20px; }
-
-/* line 121, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .btn-primary:active {
   background-color: #9B70B2;
   border-color: #72308D; }
+
+/* line 122, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+.page-header {
+  margin-top: 20px; }
 
 /* line 126, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .navbar-default {
@@ -124,41 +124,90 @@ article {
   /* line 139, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
   .navbar-form {
     display: none; }
+
+  /* line 143, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .page-header {
+    margin-top: 45px; }
+
+  /* line 147, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .navbar-header {
+    height: 100px; }
+ }
+
+@media screen and (max-width: 667px) {
+  /* line 153, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .navbar, .navbar-header {
+    height: 90px; }
+
+  /* line 156, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .page-header {
+    margin-top: 35px; }
+ }
+
+@media screen and (max-width: 567px) {
+  /* line 162, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .navbar, .navbar-header {
+    height: 75px; }
+
+  /* line 165, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .page-header {
+    margin-top: 20px; }
+ }
+
+@media screen and (max-width: 467px) {
+  /* line 171, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .navbar, .navbar-header {
+    height: 60px; }
+
+  /* line 174, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .page-header {
+    margin-top: 5px; }
+ }
+
+@media screen and (max-width: 367px) {
+  /* line 180, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .navbar, .navbar-header {
+    height: 50px; }
+
+  /* line 183, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  .page-header {
+    margin-top: 0px; }
  }
 
 @media screen and (max-width: 1000px) {
-  /* line 145, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  /* line 189, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
   .container {
     width: 98%; }
  }
 
 @media screen and (max-width: 890px) {
-  /* line 151, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  /* line 195, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
   .FAageSocialIcons {
-    width: 100px; }
-    /* line 154, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+    width: 100px;
+    margin-right: -10px; }
+    /* line 199, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
     .FAageSocialIcons ul li {
       margin-bottom: 5px; }
 
-  /* line 159, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  /* line 204, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
   a.navbar-brand {
     padding-right: 0; }
  }
 
-/* line 164, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 209, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .FAageSocialIcons {
   margin-top: 15px; }
-  /* line 167, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  /* line 212, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
   .FAageSocialIcons a {
     color: #fff;
     font-size: 20px;
     padding: 10px;
     line-height: 40px; }
-  /* line 174, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+  /* line 219, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
   .FAageSocialIcons ul {
     margin-left: 0;
     padding-left: 0; }
-    /* line 178, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+    /* line 223, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
     .FAageSocialIcons ul li {
       display: inline-block;
       height: 40px;
@@ -168,48 +217,48 @@ article {
       background-color: #C1C0C0;
       border-radius: 3px; }
 
-/* line 190, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 235, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .homepageCategoryImage {
   max-width: 100%; }
 
-/* line 194, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 239, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .twitter:hover {
   transition: background-color 0.5s ease;
   background-color: #00aced; }
 
-/* line 199, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 244, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .googleplus:hover {
   transition: background-color 0.5s ease;
   background-color: #cd201f; }
 
-/* line 204, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 249, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .youtube:hover {
   transition: background-color 0.5s ease;
   background-color: #d34836; }
 
-/* line 209, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 254, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .facebook:hover {
   transition: background-color 0.5s ease;
   background-color: #3b5998; }
 
-/* line 214, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 259, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 #main {
   overflow: hidden; }
 
 /* Body styles */
-/* line 221, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 266, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .navbar-default {
   background: none; }
 
-/* line 225, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 270, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .navbar {
   border: none; }
 
-/* line 229, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 274, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 body {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwATGjGhixkD+WWRBsABIEUwQLgATRBEACQIAr8MEOZtA/yIAAAAASUVORK5CYII=) repeat; }
 
-/* line 233, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 278, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 body:before {
   content: " ";
   width: 100%;
@@ -222,12 +271,12 @@ body:before {
   background: linear-gradient(to bottom, #002595 0%, rgba(32, 124, 229, 0.58) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002595', endColorstr='#207ce5', GradientType=0 ); }
 
-/* line 246, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 291, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .container {
   background-color: #fff; }
 
 /***********  ADMIN AREA  ***************/
-/* line 252, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+/* line 297, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
 .analytics-textarea {
   width: 300px;
   height: 150px; }

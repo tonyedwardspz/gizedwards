@@ -114,13 +114,13 @@ body{
     @include default-trans();
 }
 
-.page-header{
-	margin-top: 20px;
-}
-
 .btn-primary:active {
 	background-color: #9B70B2;
 	border-color: #72308D;
+}
+
+.page-header{
+	margin-top: 20px;
 }
 
 .navbar-default{
@@ -139,6 +139,50 @@ article{
 	.navbar-form {
 		display: none;
 	}
+
+	.page-header{
+		margin-top: 45px;
+	}
+
+	.navbar-header{
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 667px) { 
+	.navbar, .navbar-header{
+		height: 90px;
+	}
+	.page-header{
+		margin-top: 35px;
+	}
+}
+
+@media screen and (max-width: 567px) { 
+	.navbar, .navbar-header{
+		height: 75px;
+	}
+	.page-header{
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 467px) { 
+	.navbar, .navbar-header{
+		height: 60px;
+	}
+	.page-header{
+		margin-top: 5px;
+	}
+}
+
+@media screen and (max-width: 367px) { 
+	.navbar, .navbar-header{
+		height: 50px;
+	}
+	.page-header{
+		margin-top: 0px;
+	}	
 }
 
 @media screen and (max-width: 1000px) { 
@@ -150,6 +194,7 @@ article{
 @media screen and (max-width: 890px) { 
 	.FAageSocialIcons{
 		width:100px;
+		margin-right: -10px;
 
 		ul li{
 			margin-bottom: 5px;
