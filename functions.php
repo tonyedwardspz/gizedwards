@@ -723,7 +723,23 @@ add_filter( 'the_content', 'wp_bootstrap_filter_ptags_on_images' );
 // Custom post type - video 
 require_once('video-manager.php');
 
+// rewrite the permalink for custom post types
+add_action('init', 'giz_rewrite');
+function giz_rewrite() {
+    global $wp_rewrite;
+    $wp_rewrite->add_permastruct('typename', 'typename/%year%/%postname%/', true, 1);
+    add_rewrite_rule('typename/([0-9]{4})/(.+)/?$', 'index.php?typename=$matches[2]', 'top');
+    $wp_rewrite->flush_rules(); // !!!
+}
+// add cpt to main loop
+// Show posts of 'post', 'page' and 'movie' post types on home page
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
+function add_my_post_types_to_query( $query ) {
+  if ( $query->is_main_query() )
+    $query->set( 'post_type', array( 'post', 'video' ) );
+  return $query;
+}
 
 
 

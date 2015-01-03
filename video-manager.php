@@ -39,12 +39,10 @@ function video_manager_add_meta(){
 	
 	add_meta_box( 
 		'video-meta', 'Video Options', 'video_manager_meta_options', 'video', 'normal', 'high');
-	echo "<script>alert('video_manager_meta_box')</script>";
 }
 
 // create admin area extra fields
 function video_manager_meta_options(){
-	echo "<script>alert('video_manager_meta_options')</script>";
 	global $post;
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
 
