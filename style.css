@@ -280,3 +280,21 @@ body:before {
 .analytics-textarea {
   width: 300px;
   height: 150px; }
+
+/* Video custom post type */
+/* line 305, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+.youtube_video iframe {
+  display: block;
+  margin: 0 auto; }
+
+/* line 311, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+.video_masthead {
+  background-color: #000;
+  border-radius: 3px; }
+
+/* line 316, E:/wamp/www/wordpress/wp-content/themes/gizedwards/style.scss */
+.video-bg {
+  border-radius: 3px;
+  background: #474746;
+  background: linear-gradient(to bottom, #474746 0%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474746', endColorstr='#000000', GradientType=0 ); }

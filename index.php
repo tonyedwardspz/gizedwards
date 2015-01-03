@@ -16,12 +16,24 @@
 					
 						<section class="post_content clearfix">
 							<?php the_content( __("Read more &raquo;","wpbootstrap") ); ?>
+
+							<?php
+								$custom = get_post_custom($post -> ID);
+								$video_id = $custom["video_id"][0];
+
+								if ($video_id) { ?>
+
+								<img src="<?php echo getYouTubeThumb($video_id)?>" alt="<?php the_title(); ?>">
+								
+								<?php } ?>
+							
 						</section> <!-- end article section -->
+
 						
 						<footer>
 
 							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'wpbs-featured' ); ?></a>
-							<p class="meta"><?php _e("Posted", "wpbootstrap"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php echo get_the_date('F jS, Y', '','', FALSE); ?></time><?php _e("filed under", "wpbootstrap"); ?> <?php the_category(', '); ?>.</p>
+							<p class="meta"><?php _e("Posted", "wpbootstrap"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php echo get_the_date('F jS, Y', '','', FALSE); ?></time> <?php _e("filed under", "wpbootstrap"); ?> <?php the_category(', '); ?>.</p>
 							<!-- <p class="tags"><?php the_tags('<span class="tags-title">' . __("Tags","wpbootstrap") . ':</span> ', ' ', ''); ?></p> -->
 							
 						</footer> <!-- end article footer -->

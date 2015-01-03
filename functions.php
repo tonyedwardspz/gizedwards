@@ -733,14 +733,24 @@ function giz_rewrite() {
 }
 // add cpt to main loop
 // Show posts of 'post', 'page' and 'movie' post types on home page
-// add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
-// function add_my_post_types_to_query( $query ) {
-//   if ( $query->is_main_query() )
-//     $query->set( 'post_type', array( 'post', 'video' ) );
-//   return $query;
-// }
+function add_my_post_types_to_query( $query ) {
+  if ( (!is_admin()) && $query->is_main_query() )
+    $query->set( 'post_type', array( 'post', 'video' ) );
+  return $query;
+}
 
+// responsive video via fitvids
+wp_enqueue_script('fitvids', TEMPPATH . '/library/js/jquery.fitvids.js', array('jquery'), null, TRUE);
+wp_enqueue_script('fitvids-xtra', TEMPPATH . '/library/js/fitCode.js', array(), null, TRUE);
 
+// get the video embed thumb
+function getYouTubeThumb($video_id){
+
+    $embed_thumb = "http://i1.ytimg.com/vi/" . $video_id . "/0.jpg";
+
+    return $embed_thumb;
+}
 
 ?>

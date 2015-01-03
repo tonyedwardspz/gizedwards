@@ -48,6 +48,7 @@ function video_manager_meta_options(){
 
 	$custom = get_post_custom($post -> ID);
 	$video_embed_code = $custom["video_embed_code"][0];
+	$video_id = $custom["video_id"][0];
 ?>
 <style>
 	.video-manager-extras div{
@@ -65,7 +66,11 @@ function video_manager_meta_options(){
 <div class="video-manager-extras">
 	<div>
 		<label for="video_embed_code">Embed Code: </label>
-		<input name="video_embed_code" value="<?php echo $video_embed_code; ?>"/>
+		<textarea name="video_embed_code" id="video_embed_code"><?php echo $video_embed_code; ?></textarea>
+	</div>
+	<div>
+		<label for="video_id">Video ID: </label>
+		<input name="video_id" id="video_id" value="<?php echo $video_id; ?>"/>
 	</div>
 </div>
 
@@ -78,6 +83,7 @@ function video_manager_save_extras(){
 		return $post_id;
 	}else{
 		update_post_meta($post -> ID, 'video_embed_code', $_POST["video_embed_code"]);
+		update_post_meta($post -> ID, 'video_id', $_POST["video_id"]);
 	}
 }
 
