@@ -15,7 +15,7 @@ $socialTwitter: #00aced;
 $socialYouTube: #d34836;
 $socialGooglePlus: #cd201f;
 $socialFacebook: #3b5998;
-$socialBackground: #3b5998;
+$socialBackground: #C1C0C0;
 $navbarBackground: #F8F8F8;
 
 /*Mixins*/
@@ -32,12 +32,12 @@ $navbarBackground: #F8F8F8;
 	background-color: #fff;
 }
 
-.navbar-default .navbar-nav>.active>a:hover {
-	background-color: #fff;
-}
-
 .navbar-default {
 	background-color: #fff;
+
+	.navbar-nav>.active>a:hover {
+		background-color: #fff;
+	}
 }
 
 .navbar-brand img{
@@ -89,14 +89,6 @@ body{
 	} 
 }
 
-.jumbo-header h1{
-	margin-bottom: 20px;
-}
-
-.jumbo-message .btn{
-	margin: 10px 0;
-}
-
 #containerTop{
 	background-color: $navbarBackground;
 }
@@ -122,6 +114,10 @@ body{
     @include default-trans();
 }
 
+.page-header{
+	margin-top: 20px;
+}
+
 .btn-primary:active {
 	background-color: #9B70B2;
 	border-color: #72308D;
@@ -129,6 +125,10 @@ body{
 
 .navbar-default{
 	border-color: #fff;
+}
+
+article{
+	border-bottom: 6px solid darken($navbarBackground, 15%);
 }
 
 .header-border {
@@ -141,9 +141,23 @@ body{
 	}
 }
 
-@media screen and (min-width: 767px) { 
+@media screen and (max-width: 1000px) { 
 	.container{
 		width:98%;
+	}
+}
+
+@media screen and (max-width: 890px) { 
+	.FAageSocialIcons{
+		width:100px;
+
+		ul li{
+			margin-bottom: 5px;
+		}
+	}
+
+	a.navbar-brand{
+		padding-right: 0;
 	}
 }
 
