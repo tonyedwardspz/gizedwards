@@ -108,16 +108,6 @@ function wp_bootstrap_footer_links() {
   );
 }
 
-// this is the fallback for header menu
-function wp_bootstrap_main_nav_fallback() { 
-  /* you can put a default here if you like */ 
-}
-
-// this is the fallback for footer menu
-function wp_bootstrap_footer_links_fallback() { 
-  /* you can put a default here if you like */ 
-}
-
 // Shortcodes
 require_once('library/shortcodes.php');
 
@@ -143,25 +133,6 @@ add_image_size( 'wpbs-featured', 780, 300, true );
 add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
 
-/* 
-to add more sizes, simply copy a line from above 
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 300 sized image, 
-we would use the function:
-<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-for the 600 x 100 image:
-<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -213,22 +184,6 @@ function wp_bootstrap_register_sidebars() {
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
   ));
-    
-    
-  /* 
-  to add more sidebars or widgetized areas, just copy
-  and edit the above sidebar code. In order to call 
-  your new sidebar just use the following code:
-  
-  Just change the name to whatever your new
-  sidebar's id is, for example:
-  
-  To call the sidebar in your template, you can just copy
-  the sidebar.php file and rename it to your sidebar's name.
-  So using the above example, it would be:
-  sidebar-sidebar2.php
-  
-  */
 } // don't remove this bracket!
 add_action( 'widgets_init', 'wp_bootstrap_register_sidebars' );
 
@@ -586,7 +541,7 @@ if( !function_exists( "wp_bootstrap_theme_js" ) ) {
       '1.2' );
 
     wp_register_script( 'wpbs-js', 
-      get_template_directory_uri() . '/library/dist/js/scripts.d1e3d952.min.js',
+      get_template_directory_uri() . '/library/js/scripts.js',
       array('bootstrap'), 
       '1.2' );
   

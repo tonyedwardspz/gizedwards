@@ -24,14 +24,14 @@
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col-sm-8 clearfix" role="main">
-
-					
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
 						
-							<div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="page-header">
+								<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+							</div>
 						
 						</header> <!-- end article header -->
 					

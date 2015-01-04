@@ -6,6 +6,7 @@ function video_manager_register(){
 	$args = array(
 		'label' => __('Video Manager'),
 		'singular_label' => __('Video'),
+		'taxonomies' => array('category'), 
 		'public' => true,
 		'show_ui' => true,
 		'capability_type' => 'post',

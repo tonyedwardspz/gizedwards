@@ -10,7 +10,9 @@
 						
 						<header>
 							
-							<div class="page-header"><h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2></div>
+							<div class="page-header">
+								<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+							</div>
 						
 						</header> <!-- end article header -->
 					
@@ -22,9 +24,12 @@
 								$video_id = $custom["video_id"][0];
 
 								if ($video_id) { ?>
-
-								<img src="<?php echo getYouTubeThumb($video_id)?>" alt="<?php the_title(); ?>">
-								
+								<div class="vidImageOverlay">
+									<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+										<img src="<?php echo getYouTubeThumb($video_id)?>" alt="<?php the_title(); ?>" class="videoThumb">
+										<img src="<?php echo IMAGES . "/play.png"; ?>" class="playOverlay">
+									</a>
+								</div>
 								<?php } ?>
 							
 						</section> <!-- end article section -->
