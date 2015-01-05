@@ -12,7 +12,7 @@ function video_manager_register(){
 		'capability_type' => 'post',
 		'hierarchical' => true,
 		'has_archive' => true,
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'supports' => array('title', 'editor', 'thumbnail', 'comments'),
 		'rewrite' => array('slug' => 'videos', 'with_front' => false)
 	);
 	 // register type and custom taxonomy
