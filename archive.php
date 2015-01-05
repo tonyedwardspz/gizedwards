@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row">
+			<div id="content" class="clearfix row archive-template">
 			
 				<div id="main" class="col-sm-8 clearfix" role="main">
 				

@@ -28,9 +28,6 @@ if( !function_exists( "wp_bootstrap_head_cleanup" ) ) {
 // Launch operation cleanup
 add_action( 'init', 'wp_bootstrap_head_cleanup' );
 
-// Get the admin options
-require_once('theme-options.php');
-
 // remove WP version from RSS
 if( !function_exists( "wp_bootstrap_rss_version" ) ) {  
   function wp_bootstrap_rss_version() { return ''; }
@@ -678,6 +675,9 @@ add_filter( 'the_content', 'wp_bootstrap_filter_ptags_on_images' );
 // Custom post type - video 
 require_once('video-manager.php');
 
+// Get the admin options
+require_once('theme-options.php');
+
 // rewrite the permalink for custom post types
 add_action('init', 'giz_rewrite');
 function giz_rewrite() {
@@ -686,8 +686,8 @@ function giz_rewrite() {
     add_rewrite_rule('typename/([0-9]{4})/(.+)/?$', 'index.php?typename=$matches[2]', 'top');
     $wp_rewrite->flush_rules(); // !!!
 }
+
 // add cpt to main loop
-// Show posts of 'post', 'page' and 'movie' post types on home page
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 function add_my_post_types_to_query( $query ) {
