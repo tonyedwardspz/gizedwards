@@ -526,6 +526,16 @@ add_action( 'wp_enqueue_scripts', 'wp_bootstrap_theme_styles' );
 if( !function_exists( "wp_bootstrap_theme_js" ) ) {  
   function wp_bootstrap_theme_js(){
 
+    //de register the built in jquery
+    wp_deregister_script('jquery');
+
+    // build the jQuery CDN link 
+    $googleCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
+    
+    //register all scripts
+    // wp_register_script($handle, $src, $deps, $ver, $in_footer);
+    wp_register_script('jquery', $googleCDN, false, null, true);
+
     if ( !is_admin() ){
       if ( is_singular() AND comments_open() AND ( get_option( 'thread_comments' ) == 1) ) 
         wp_enqueue_script( 'comment-reply' );
@@ -535,18 +545,19 @@ if( !function_exists( "wp_bootstrap_theme_js" ) ) {
     wp_register_script( 'bootstrap', 
       get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.js', 
       array('jquery'), 
-      '1.2' );
+      '1.2', true );
 
     wp_register_script( 'wpbs-js', 
       get_template_directory_uri() . '/library/js/scripts.js',
       array('bootstrap'), 
-      '1.2' );
+      '1.2', true );
   
     wp_register_script( 'modernizr', 
       get_template_directory_uri() . '/bower_components/modernizer/modernizr.js', 
       array('jquery'), 
-      '1.2' );
+      '1.2', true );
   
+    wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'bootstrap' );
     wp_enqueue_script( 'wpbs-js' );
     wp_enqueue_script( 'modernizr' );
@@ -700,7 +711,6 @@ function add_my_post_types_to_query( $query ) {
 
 // responsive video via fitvids
 wp_enqueue_script('fitvids', TEMPPATH . '/library/js/jquery.fitvids.js', array('jquery'), null, TRUE);
-wp_enqueue_script('fitvids-xtra', TEMPPATH . '/library/js/fitCode.js', array(), null, TRUE);
 
 // get the video embed thumb
 function getYouTubeThumb($video_id){

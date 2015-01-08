@@ -30,6 +30,7 @@ function addTwitterBSClass(thisObj) {
   return true;
 }
 
+
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
@@ -69,6 +70,16 @@ jQuery(document).ready(function($) {
 	$('.dropdown-toggle').dropdown();
 });
 
+// fitvids
+(function($) {
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".youtube_video").fitVids();
+  });
+  
+  })(jQuery);
+
+// https://github.com/1000ch/lazyload-image
 (function () {
   'use strict';
 
