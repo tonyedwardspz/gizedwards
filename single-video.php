@@ -1,13 +1,23 @@
 <?php get_header(); ?>
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-			<div class="video_masthead" class="clearfix row">
+
+			<!-- <img src="<?php echo getYouTubeThumb($video_id)?>" alt="<?php the_title(); ?>" class="offPage"> -->
+			
+			<div class="video_masthead" class="clearfix row singlVideoTemplate">
+
+				<?php 
+					if (have_posts()) : while (have_posts()) : the_post(); 
+					$custom = get_post_custom($post -> ID);
+					$video_embed_code = $custom["video_embed_code"][0];
+					$video_id = $custom["video_id"][0];
+				?>
+
+				<img src="<?php echo getYouTubeThumb($video_id)?>" alt="video preview" class="offPage">
 
 				<div class="col-sm-12 clearfix video-bg">
 					<?php
-						$custom = get_post_custom($post -> ID);
-						$video_embed_code = $custom["video_embed_code"][0];
+						
 
 						if ($video_embed_code) {
 					?>

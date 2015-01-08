@@ -23,6 +23,12 @@ $navbarBackground: #F8F8F8;
 	transition: background-color 0.5s ease;
 }
 
+.offPage{
+	position: absolute;
+	top: 0;
+	z-index:-2;
+}
+
 
 #content{
 	padding: 60px 0 0;
