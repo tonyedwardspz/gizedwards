@@ -709,9 +709,6 @@ function add_my_post_types_to_query( $query ) {
     return $query;
 }
 
-// responsive video via fitvids
-wp_enqueue_script('fitvids', TEMPPATH . '/library/js/jquery.fitvids.js', array('jquery'), null, TRUE);
-
 // get the video embed thumb
 function getYouTubeThumb($video_id){
 
