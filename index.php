@@ -26,8 +26,8 @@
 								if ($video_id) { ?>
 								<div class="vidImageOverlay">
 									<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-										<img src="<?php echo getYouTubeThumb($video_id)?>" alt="<?php the_title(); ?>" class="videoThumb">
-										<img src="<?php echo IMAGES . "/play.png"; ?>" class="playOverlay">
+										<img  is="lazyload-image" src="<?php echo getYouTubeThumb($video_id)?>" alt="<?php the_title(); ?>" class="videoThumb">
+										<img src="<?php echo IMAGES . "/play.png"; ?>" class="playOverlay" alt="">
 									</a>
 								</div>
 								<?php } ?>
