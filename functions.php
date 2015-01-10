@@ -717,4 +717,11 @@ function getYouTubeThumb($video_id){
     return $embed_thumb;
 }
 
+// add custom post type to the recent posts widget
+add_filter('widget_posts_args', 'widget_posts_args_add_custom_type'); 
+function widget_posts_args_add_custom_type($params) {
+   $params['post_type'] = array('post','video');
+   return $params;
+}
+
 ?>
